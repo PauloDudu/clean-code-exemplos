@@ -18,9 +18,9 @@ function login(token, usuario, senha) {
 function loginGood(token, usuario, senha) {
 
     if(validarToken(token) && logarUsuario(usuario, senha)) {
-        mensagem(true);
+        mensagem('sucess');
     } else {
-        mensagem(false);
+        mensagem('error');
     }
 }
 
@@ -35,8 +35,8 @@ function logarUsuario(usuario, senha) {
 }
 
 
-function mensagem(sucesso) {
-    if(sucesso) {
+function mensagem(msg) {
+    if(msg == 'sucess') {
         console.log("Logado com sucesso pode passar!");
     } else {
         console.log("Usuario ou senha não informados corretamente!");
